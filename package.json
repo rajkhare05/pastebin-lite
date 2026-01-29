@@ -1,0 +1,34 @@
+{
+  "name": "pastebin-lite",
+  "version": "1.0.0",
+  "description": "Pastebin like service",
+  "main": "index.js",
+  "scripts": {
+    "migrations": "node configs/migrations.js",
+    "start": "cross-env NODE_ENV=production npm run migrations && node index.js",
+    "dev": "cross-env NODE_ENV=development npm run migrations && nodemon index.js"
+  },
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajkhare05/pastebin-lite.git"
+  },
+  "author": "Raj Khare",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rajkhare05/pastebin-lite/issues"
+  },
+  "homepage": "https://github.com/rajkhare05/pastebin-lite#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1",
+    "path": "^0.12.7",
+    "pg": "^8.17.2",
+    "pug": "^3.0.3"
+  },
+  "devDependencies": {
+    "cross-env": "^10.1.0",
+    "nodemon": "^3.1.11"
+  }
+}

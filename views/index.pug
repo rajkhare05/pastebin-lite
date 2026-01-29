@@ -1,0 +1,33 @@
+doctype html
+html
+    head
+        title Pastebin Lite
+        style
+            include index.css
+    body
+        form#container
+            header Pastebin Lite
+            textarea#content(name='content' placeholder='Paste your content here...' required)
+            br
+            div#viewBox
+                div
+                    input#maxViews(type='checkbox' name='max_views')
+                    label(for='maxViews') Set view limit
+                input#views(type='number' min='1' placeholder='Maximum views' name='maxViews')
+            div#ttlBox
+                div
+                    input#ttlSeconds(type='checkbox' name='ttl_seconds')
+                    label(for='ttlSeconds') Set expiry
+                input#ttl(type='number' min='1' placeholder='Time to Live (seconds)' name='ttlSeconds')
+            br
+            input#submitPaste(type="submit")
+
+        div#popup
+            div#closePopUp x
+            h2 Paste URL
+            div#url
+            button#copy Copy
+
+    script
+        include index.js
+

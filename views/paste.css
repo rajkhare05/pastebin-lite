@@ -1,0 +1,31 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Sans-Serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: justify;
+    margin: 2% 0;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 93%;
+}
+
+#title {
+    align-self: start;
+    margin: 10px 0;
+}
+
+.content {
+    font-size: 18px;
+    padding-right: 8px;
+}
+

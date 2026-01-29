@@ -1,0 +1,115 @@
+* { 
+    padding: 0;
+    margin: 0;
+    font-family: Sans-Serif;
+    /* background-color: #9a96ff; */
+}
+
+#container {
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+#content {
+    width: 70%;
+    min-height: 100px;
+    resize: vertical;
+    padding: 5px 8px;
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+header {
+    font-size: 36px;
+    font-weight: 700;
+}
+
+label {
+    font-weight: 700;
+    font-size: 18px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+}
+
+#viewBox, #ttlBox {
+    margin-top: 10px;
+    div {
+        display: flex;
+        label {
+            margin-left: 4px;
+        }
+    }
+    input[type='number'] {
+        width: 25%;
+        height: 25px;
+        padding-left: 4px;
+    }
+    #ttl, #views {
+        margin-top: 2px;
+    }
+}
+
+#submitPaste {
+    width: 70px;
+    height: 30px;
+}
+
+#popup {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    border-radius: 20px;
+    width: 40vw;
+    height: 30vh;
+    background-color: #e3e0d8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    #closePopUp {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    #closePopUp:hover {
+        cursor: pointer;
+    }
+
+    h2 {
+        margin-left: 36%;
+        margin-top: 10%;
+        margin-bottom: 4%;
+    }
+
+    #url {
+        display: inline;
+        border: 1px dotted black;
+        font-size: 14px;
+        margin-left: 16px;
+        padding: 5px 10px;
+    }
+
+    #copy {
+        margin-left: 42%;
+        margin-top: 4%;
+        width: 60px;
+        height: 28px;
+    }
+}
+
+#errorPopUp {
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 33%;
+    border-radius: 20px;
+    width: 40vw;
+    height: 30vh;
+    background-color: #e3e0d8;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+}
+
