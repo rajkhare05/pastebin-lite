@@ -36,7 +36,10 @@ container.addEventListener("submit", async (e) => {
     }
 
     try {
-        const res = await fetch("http://localhost:3000/api/pastes", {
+        const PROTOCOL = location.protocol;
+        const HOST = location.host;
+        const URL = `${PROTOCOL}//${HOST}/api/pastes`
+        const res = await fetch(URL, {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
