@@ -42,7 +42,7 @@ const getPastePage = async (req, res) => {
             }
             return res.render("paste", { title: `Paste ${id}`, content });
         }
-        return res.render("404", { message: "Paste not found!" });
+        return res.status(404).render("404", { message: "Paste not found!" });
 
     } catch(err) {
         console.error("An error occurred !", err);
