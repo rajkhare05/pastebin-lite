@@ -59,11 +59,15 @@ input[type="checkbox"] {
 
 #popup {
     display: none;
+    flex-direction: column;
     position: absolute;
+    align-items: center;
+    justify-content: center;
+    gap: 14px 0;
     top: 20%;
-    left: 33%;
+    left: 26%;
     border-radius: 20px;
-    width: 40vw;
+    width: 52vw;
     height: 30vh;
     background-color: #e3e0d8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -78,38 +82,16 @@ input[type="checkbox"] {
         cursor: pointer;
     }
 
-    h2 {
-        margin-left: 36%;
-        margin-top: 10%;
-        margin-bottom: 4%;
-    }
-
     #url {
         display: inline;
         border: 1px dotted black;
         font-size: 14px;
-        margin-left: 16px;
         padding: 5px 10px;
     }
 
     #copy {
-        margin-left: 42%;
-        margin-top: 4%;
         width: 60px;
         height: 28px;
     }
-}
-
-#errorPopUp {
-    display: none;
-    position: absolute;
-    top: 20%;
-    left: 33%;
-    border-radius: 20px;
-    width: 40vw;
-    height: 30vh;
-    background-color: #e3e0d8;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
 }
 

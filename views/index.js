@@ -49,7 +49,7 @@ container.addEventListener("submit", async (e) => {
         const paste = await res.json();
 
         if (paste != null && paste.url != null) {
-            popup.style.display = "block";
+            popup.style.display = "flex";
             url.textContent = paste.url;
 
             // cleanup
