@@ -8,7 +8,10 @@ dotenv.config();
 
 const runMigrations = async () => {
 
-    const client = new Client({ connectionString: process.env.DB_URL })
+    const client = new Client({ 
+        connectionString: process.env.DB_URL,
+        ssl: { rejectUnauthorized: false} 
+    })
 
     try {
         // Connect to the database

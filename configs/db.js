@@ -3,7 +3,10 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const pool = new Pool({ connectionString: process.env.DB_URL });
+const pool = new Pool({ 
+    connectionString: process.env.DB_URL, 
+    ssl: { rejectUnauthorized: false} 
+});
 
 pool.connect().then(
     (client) => {
