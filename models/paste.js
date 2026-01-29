@@ -27,19 +27,22 @@ const createPaste = async (paste) => {
     }
 }
 
-const updatePasteViewById = async (id) => {
-    try {
-        const raw = await pool.query("UPDATE pastes SET views = views+1 WHERE id = $1 RETURNING view;", [id]);
-        if (raw.rowCount != null && raw.rowCount == 1) {
-            const paste = raw.rows[0];
-            return paste.views;
-        }
-        return null;
+const updateAndGetRemainingViews = async (pasteID, maxViews, views) => {
+    if (maxViews != null) {
+        if (views <= maxViews) {
+            try {
+                await pool.query("UPDATE pastes SET views = views+1 WHERE id = $1", [pasteID]);
+                return maxViews - views;
 
-    } catch(err) {
-        return null;
+            } catch(err) {
+                throw err;
+            }
+        }
+        return -1;
     }
+    // return null if no view constraint is set.
+    return null;
 }
 
-export { getPasteById, createPaste, updatePasteViewById };
+export { getPasteById, createPaste, updateAndGetRemainingViews };
 

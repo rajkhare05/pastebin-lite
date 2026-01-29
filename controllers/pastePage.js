@@ -1,7 +1,6 @@
-import { getPasteById } from "../models/paste.js";
+import { getPasteById, updateAndGetRemainingViews } from "../models/paste.js";
 import { isValidNumber } from "../utils/checkValidNumber.js";
 import { getPasteExpiry, isPasteExpired } from "../utils/checkExpiry.js";
-import { updateAndGetRemainingViews } from "../utils/updateViews.js";
 
 const getPastePage = async (req, res) => {
     try {
